@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADOPM3_CodeExercises", "ADOPM3_CodeExercises\ADOPM3_CodeExercises.csproj", "{2D0036E2-6DB9-4910-B824-861F5C047E62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate1", "Delegate1\Delegate1.csproj", "{2D0036E2-6DB9-4910-B824-861F5C047E62}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streams", "Streams\Streams.csproj", "{9695DC4C-C86E-40CA-9370-5D3CF892D12A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata_Delegate", "Kata_Delegate\Kata_Delegate.csproj", "{60D2A8BD-7025-4C74-985D-6FE4624B0753}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9695DC4C-C86E-40CA-9370-5D3CF892D12A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9695DC4C-C86E-40CA-9370-5D3CF892D12A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9695DC4C-C86E-40CA-9370-5D3CF892D12A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60D2A8BD-7025-4C74-985D-6FE4624B0753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60D2A8BD-7025-4C74-985D-6FE4624B0753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60D2A8BD-7025-4C74-985D-6FE4624B0753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60D2A8BD-7025-4C74-985D-6FE4624B0753}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

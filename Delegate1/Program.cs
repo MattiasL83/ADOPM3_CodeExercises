@@ -12,14 +12,15 @@ namespace ADOPM3_CodeExercises
             Action<int> DoOnEachElement = Write1;
             DoOnEachElement += Write2;
             DoOnEachElement += Write3;
-
             myList.ForEach(DoOnEachElement);
-
+         
             Console.WriteLine();
             Predicate<int> Find = IsEven;
             Find += IsOdd;
+            
             var myEvens = myList.FindAll(Find);
             myEvens.ForEach(DoOnEachElement);
+            
         }
         static void Write1(int i)
         {

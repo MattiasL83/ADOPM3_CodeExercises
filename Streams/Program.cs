@@ -12,32 +12,39 @@ namespace Streams
             Random rand = new Random(0);
 
             //Random byte[]
-            byte[] image = new byte[10000000];
-            rand.NextBytes(image);
+            byte[] image = new byte[10_000_000];
+//            rand.NextBytes(image);
+
             for (int i = 0; i < image.Length; i++)
             {
                 image[i] = 236;
             }
 
             //Uncompressed
-//            using (Stream s = new MemoryStream())
-            using (Stream s = File.Create(fname("Example4_13_uncompressedbytes.bin")))
+            using (Stream s = new MemoryStream())
+            //            using (Stream s = File.Create(fname("Example4_13_uncompressedbytes.bin")))
             using (BinaryWriter w = new BinaryWriter(s))
+            {
                 w.Write(image);
-            Console.WriteLine(new FileInfo(fname("Example4_13_uncompressedbytes.bin")).Length);
+                Console.WriteLine(s.Length);
+            }
+            //            Console.WriteLine(new FileInfo(fname("Example4_13_uncompressedbytes.bin")).Length);
 
-//           using (Stream s = new MemoryStream())
-            using (Stream s = File.Create(fname("Example4_13_compressedbytes.bin")))
-//            using (Stream ds = new DeflateStream(s, CompressionMode.Compress))
+            using (Stream s = new MemoryStream())
+            //            using (Stream s = File.Create(fname("Example4_13_compressedbytes.bin")))
+            //            using (Stream ds = new DeflateStream(s, CompressionMode.Compress))
             using (Stream ds = new GZipStream(s, CompressionMode.Compress))
-//            using (Stream ds = new BrotliStream(s, CompressionMode.Compress))
+            //            using (Stream ds = new BrotliStream(s, CompressionMode.Compress))
             using (BinaryWriter w = new BinaryWriter(ds))
+            {
                 w.Write(image);
+                Console.WriteLine(s.Length);
+            }
 
             Console.WriteLine(new FileInfo(fname("Example4_13_compressedbytes.bin")).Length);
 
-//            using (Stream s = new MemoryStream())
-            using (Stream s = File.OpenRead(fname("Example4_13_compressedbytes.bin")))
+            using (Stream s = new MemoryStream())
+//            using (Stream s = File.OpenRead(fname("Example4_13_compressedbytes.bin")))
 //            using (Stream ds = new DeflateStream(s, CompressionMode.Decompress))
             using (Stream ds = new GZipStream(s, CompressionMode.Decompress))
 //            using (Stream ds = new BrotliStream(s, CompressionMode.Decompress))

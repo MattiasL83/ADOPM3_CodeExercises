@@ -6,13 +6,20 @@ namespace Kata_Delegate
     {
         static void Main(string[] args)
         {
-            var hotelMembers = new MemberList(50);
-            hotelMembers.Sort();
-
-            hotelMembers.VerifiedOnly(RadissonVerified);
+            var RadissonMembers = new MemberList(50);
+            RadissonMembers.Sort();
+            RadissonMembers.VerifiedOnly(RadissonVerified);
             
-            Console.WriteLine(hotelMembers);
+            Console.WriteLine(RadissonMembers);
             Console.WriteLine();
+
+            var HiltonMembers = new MemberList(50);
+            HiltonMembers.Sort();
+            HiltonMembers.VerifiedOnly(HiltonVerified);
+
+            Console.WriteLine(HiltonMembers);
+            Console.WriteLine();
+
         }
 
         static public bool HiltonVerified(Member member)

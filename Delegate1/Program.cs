@@ -14,11 +14,12 @@ namespace ADOPM3_CodeExercises
             DoOnEachElement += Write3;
             myList.ForEach(DoOnEachElement);
          
+            
             Console.WriteLine();
             Predicate<int> Find = IsEven;
             Find += IsOdd;
             
-            var myEvens = myList.FindAll(Find);
+            var myEvens = myList.FindAll(IsEven);
             myEvens.ForEach(DoOnEachElement);
             
         }

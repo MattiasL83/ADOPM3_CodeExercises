@@ -32,4 +32,6 @@ namespace Kata_Delegate
         }
 
     }
+    //Exercise
+    //1.    Make the VerifiedOny() call with a Lambda Expression Method as a parameter
 }

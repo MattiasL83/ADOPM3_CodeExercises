@@ -85,3 +85,7 @@ namespace CardGame_Delegate
         }
     }
 }
+// Exercise:
+// 1.  Create a Method that takes a delegate as a parameter and returns a new instance of DeckOfCards containing the cards
+//     matching the crieras in the delegate. The cards should be removed from the original deck.
+//     
